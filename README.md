@@ -1,2 +1,2 @@
 # hello-word
-Just study
+Just
