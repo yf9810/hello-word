@@ -7,3 +7,8 @@
 　　　　-m 本次提交的说明
 
 　　为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件
+
+    git status 当前仓库的状态
+
+    git diff <文件名> 查看修改的内容
+
