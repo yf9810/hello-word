@@ -23,4 +23,7 @@ git是使用C语言编写的
 
     git reflog 查看命令历史，以便确定要回到未来的哪个版本
     
+    git checkout -- <文件名>  撤销工作区的更改
+    git reset HEAD <文件名> 撤销暂存区的更改
     
+
