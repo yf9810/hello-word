@@ -19,12 +19,12 @@ git是使用C语言编写的
     git reset --hard HEAD^ 回退上一个版本
 	git reset --hard HEAD^^ 回退到前两个版本
 	git reset --hard HEAD~100 回退到100个版本之前
-	git reset --hard <SHA1> 回退指定的版本
+	git reset --hard <commitID> 回退指定的版本
 
     git reflog 查看命令历史，以便确定要回到未来的哪个版本
     
-    git checkout -- <文件名>  撤销工作区的更改
-    git reset HEAD <文件名> 撤销暂存区的更改
+    git checkout -- <文件名>  撤销工作区的更改，还原暂存区到工作区
+    git reset HEAD <文件名> 撤销暂存区的更改，还原HEAD到工作区
     
     git rm <文件名> 删除版本库里的文件 并且不需要git add可直接commit
 
