@@ -2,7 +2,7 @@ git是使用C语言编写的
 
 　　git init 把当前目录改成可以被git管理的目录
 
-　　git add 「文件名」把文件添加到仓库
+　　git add <文件名> 把文件添加到仓库
 
 　　git commit -m "提交说明" 把文件提交到仓库
 
@@ -15,6 +15,7 @@ git是使用C语言编写的
     git diff <文件名> 查看修改的内容
     
     git log 查看提交的历史记录
+	git log --pretty=oneline 
 
     git reset --hard HEAD^ 回退上一个版本
 	git reset --hard HEAD^^ 回退到前两个版本
@@ -28,4 +29,23 @@ git是使用C语言编写的
     
     git rm <文件名> 删除版本库里的文件 并且不需要git add可直接commit
 
+分支
 
+    git checkout -b <dev> 创建一个分支叫dev，并且切换到dev分支。
+    相当于以下的两个命令：
+　　　　$ git branch <dev>  创建分支dev
+　　　　$ git checkout <dev>  切换到dev分支
+
+    git branch 查看当前分支
+
+    git merge <dev>  把指定分支（dev）的内容合并到当前的分支
+    
+    git branch -d <dev>  删除分支（dev）
+    
+    Git鼓励使用分支完成任务，合并后再删除分支，因为更加的安全。
+    
+最新版本的Git提供了新的git switch命令来切换分支：
+    
+    git switch -c <dev>  创建并切换到新的(dev)分支
+    
+    git switch <master>  切换到已有的(master)分支
