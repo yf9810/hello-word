@@ -26,4 +26,6 @@ git是使用C语言编写的
     git checkout -- <文件名>  撤销工作区的更改
     git reset HEAD <文件名> 撤销暂存区的更改
     
+    git rm <文件名> 删除版本库里的文件 并且不需要git add可直接commit
+
 
