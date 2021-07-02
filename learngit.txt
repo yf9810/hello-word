@@ -39,13 +39,31 @@ git是使用C语言编写的
     git branch 查看当前分支
 
     git merge <dev>  把指定分支（dev）的内容合并到当前的分支
+	git merge --no-ff -m "提交说明" <dev> 保留分支提交记录，即使删除分支也会在log中出现。便于合作使用
     
     git branch -d <dev>  删除分支（dev）
+    git branch -D <name> 强制删除一个没有合并的分支
     
     Git鼓励使用分支完成任务，合并后再删除分支，因为更加的安全。
     
-最新版本的Git提供了新的git switch命令来切换分支：
+    最新版本的Git提供了新的git switch命令来切换分支：
     
     git switch -c <dev>  创建并切换到新的(dev)分支
     
     git switch <master>  切换到已有的(master)分支
+
+    git log --graph  命令可以看到分支合并图
+    	git log --graph --pretty=oneline --abbrev-commit
+
+    master分支应该只用来发布正式版本，自己的工作应该在自己的分支上完成。
+
+    git stash 将现在手中的工作放置，去其他分支管理别的任务
+    git stash list 
+
+    git stash pop 回到工作现场
+
+    git cherry-pick <commitID> 把master上某个更改复制到当前分支上（如修复bug的commit）
+
+    每开发一个新功能，最好新建一个新分支，最后再合并到自己的工作分支。
+
+
